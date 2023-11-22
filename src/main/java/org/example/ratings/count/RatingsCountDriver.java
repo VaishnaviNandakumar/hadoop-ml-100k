@@ -15,7 +15,7 @@ public class RatingsCountDriver {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Configuration conf = new Configuration();
         FileSystem fs = FileSystem.get(conf);
-        Job job = Job.getInstance(conf, "movie-data");
+        Job job = Job.getInstance(conf, "rating-count");
         job.setJarByClass(RatingsCountDriver.class);
         job.setMapperClass(RatingsCountMapper.class);
         job.setCombinerClass(RatingsCountReducer.class);
